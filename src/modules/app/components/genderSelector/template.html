@@ -1,0 +1,8 @@
+<div>
+    <label for="genderSelect">Gender: </label>
+    <select name="genderSelect"
+            id="genderSelect"
+            ng-disabled="$ctrl.disabled"
+            ng-options="option.gender for option in $ctrl.genderOptions track by option.gender"
+            ng-model="$ctrl.selectedGender" ng-change="$ctrl.onGenderSelected($event)"></select>
+</div>

@@ -1,0 +1,17 @@
+<div class="app">
+    <app-header disable-gender="!$ctrl.citiesList"></app-header>
+    <div class="content">
+        <spinner ng-if="!$ctrl.citiesList"></spinner>
+        <weather-sorter
+                ng-if="$ctrl.citiesList"
+                cities="$ctrl.citiesList"
+                best-temperature="$ctrl.bestWeatherParams.temperature"
+                best-humidity="$ctrl.bestWeatherParams.humidity"
+                min-best-temperature="$ctrl.bestWeatherParams.minBestTemperature"
+                max-best-temperature="$ctrl.bestWeatherParams.maxBestTemperature"
+                min-best-humidity="$ctrl.bestWeatherParams.minBestHumidity"
+                max-best-humidity="$ctrl.bestWeatherParams.maxBestHumidity"
+        ></weather-sorter>
+    </div>
+    <app-footer></app-footer>
+</div>

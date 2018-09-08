@@ -1,0 +1,8 @@
+<div class="city-list-wrapper">
+    <ul ng-if="$ctrl.cities.length" class="city-list">
+        <li ng-repeat="city in $ctrl.cities | orderBy : 'main.temp' track by $index ">
+            <city-weather city="city"></city-weather>
+        </li>
+    </ul>
+    <div ng-if="!$ctrl.cities.length">There is no cities according current weather parameters</div>
+</div>
